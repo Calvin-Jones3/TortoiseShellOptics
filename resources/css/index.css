@@ -1,19 +1,163 @@
-* {
-  font-family: Helvetica, Arial, sans-serif;
+html {
+	font-size: 18px;
+	line-height: 1.4;
+	color: black;
+	font-family: helvetica;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
 }
 
 
-h1 {
-  color: SeaGreen;
+.content {
+	width: 960px;
+	margin: auto;
+	display: flex;
+	align-items: center;
 }
 
 
-p, 
-li {
-  font-size: 18px;
+.header {
+	background-image: url("../images/glasses-bg.png");
+	background-size: cover;
+	background-position: left;
+	height: 30rem;
+}
+.header nav {
+	//margin-top: 1rem;
+	position: relative;
+	top: 1rem;
+}
+.header nav .content {
+	background-color: cadetblue;
+	justify-content: space-between;
+	color: white;
+	padding: 1rem 0rem;
+}
+.header nav .content .logo {
+	align-items: center;
+	display: flex;
+}
+.header nav .content .logo h1 {
+	display: inline-flex;
+}
+.header nav .content img {
+	height: 1.5rem;
+	margin-left: 2rem;
+	margin-right: 1rem;
+}
+.header nav .content ul li {
+	display: inline;
+	margin: 1rem 2rem 1rem 0;
+}
+.header .banner {
+	height: 30rem;
+	display: flex;
+	align-content: center;
+}
+.header .banner .content {
+	display: flex;
+	justify-content: flex-end
+}
+.header .banner .content h1{
+	padding: 1.5rem 5rem;
+	font-size: 2rem;
+	font-weight: bold;
+	line-height: 1.2;
+	background-color: white;
+	position: relative;
+	left: 2rem;
+	text-transform: uppercase;
 }
 
 
-a {
-  text-decoration: none;
+.factors .content {
+	height: 8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: 3rem auto;
+}
+.factors .content .factor {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 5rem;
+	height: 8rem;
+	margin: 0 3rem;
+}
+.factors .content .factor .image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 5rem;
+	height: 5rem;
+}
+.factors .content .factor .image img {
+	width: 5rem;
+}
+.factors .content .factor.p1 .image img {
+	width: 3.5rem;
+}
+.factors .content .factor p {
+	text-align: center;
+}
+
+
+.details .content {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.details .content .detail {
+	width: 35%;
+	margin-right: 5%;
+}
+.details .content .detail h2 {
+	font-size: 1rem;
+	color: white;
+	background-color: cadetblue;
+	margin-bottom: 1rem;
+	padding: 1rem 1.25rem;
+	width: 10rem;
+}
+
+
+.footer {
+	background-color: lightblue;
+	margin-top: 5rem;
+}
+.footer .content {
+	display: flex;
+	align-content: center;
+}
+.footer .content img {
+	height: 1.5rem;
+	margin: 4rem 1rem;
+}
+
+
+
+@media only screen and (max-width: 990px) {
+	.content {
+		width: 100%;
+	}
+
+	.header {
+		height: 22rem;
+	}
+	.header nav {
+		width: 100%;
+		position: fixed;
+		z-index: 10;
+		top: 0;
+	}
+	.header .banner .content h1 {
+		margin: 5rem 2rem;
+		padding: 0.75rem 4rem;
+		font-size: 1.33rem;
+		left: 0;
+	}
 }
